@@ -192,6 +192,7 @@ if fecha_inicial and fecha_final:
 # -------------------------------------------------------
 # 8. Búsqueda individual
 # -------------------------------------------------------
+
 st.markdown("### 🔍 Búsqueda individual por Cuenta.Titu o Matrícula")
 
 col1, col2 = st.columns(2)
@@ -215,7 +216,29 @@ df_busqueda = df_busqueda.drop_duplicates().reset_index(drop=True)
 
 if not df_busqueda.empty:
     st.success(f"{len(df_busqueda)} registro(s) encontrados:")
-    st.dataframe(df_busqueda)
+    for idx, row in df_busqueda.iterrows():
+        st.markdown("---")
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown(f"**Cuenta.Titu:** {row['Cuenta.Titu']}")
+            st.markdown(f"**Nombre:** {row.get('Nombre.Contacto', row.get('Nombre.Titular',''))}")
+            st.markdown(f"**Email:** {row.get('E.mail','')}")
+            st.markdown(f"**Móvil:** {row.get('Movil','')}")
+            st.markdown(f"**Departamento:** {row.get('Departamento','')}")
+            st.markdown(f"**Matrícula:** {row['Matricula']}")
+            st.markdown(f"**VIN:** {row['VIN']}")
+            st.markdown(f"**Name_Family:** {row['Name_Family']}")
+            st.markdown(f"**Año Modelo:** {row['Año']}")
+
+        with col2:
+            st.markdown(f"**Visitas:** {row['visitas']}")
+            st.markdown(f"**Fecha Ultimo Mtto.:** {row.get('Fec_ultimo_mantenimiento','')}")
+            st.markdown(f"**Ultimo Mtto.:** {row.get('ultimo_desc_mantenimiento','')}")
+            st.markdown(f"**Km Ultimo Mtto.:** {row.get('Km_ult_mtto','')}")
+            st.markdown(f"**Siguiente Mantenimiento:** {row.get('next_mtto')}")
+            st.markdown(f"**Km Último:** {row.get('Km_ultimo','')}")
+            st.markdown(f"**Km Proyectado:** {row.get('Km_proyectado','')}")
+
 else:
     st.info("No se encontraron registros para los valores ingresados.")
 

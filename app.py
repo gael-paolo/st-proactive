@@ -123,35 +123,35 @@ if fecha_inicial and fecha_final:
     subsets = {
         "LP_Days_1er.xlsx": generar_subset(
             resultado, ["La Paz", "Oruro"], "Days", ["1er_Contacto", "Ambas"],
-            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto"]
+            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto", "Movil"]
         ),
         "LP_Days_2do.xlsx": generar_subset(
             resultado, ["La Paz", "Oruro"], "Days", ["2do_Contacto"],
-            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto"]
+            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto", "Movil"]
         ),
         "LP_Km_1er.xlsx": generar_subset(
             resultado, ["La Paz", "Oruro"], "Km", ["1er_Contacto", "Ambas"],
-            ["Nombre.Contacto", "Matricula", "Name_Family", "Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto"]
+            ["Nombre.Contacto", "Matricula", "Name_Family", "Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto", "Movil"]
         ),
         "LP_Km_2do.xlsx": generar_subset(
             resultado, ["La Paz", "Oruro"], "Km", ["2do_Contacto"],
-            ["Nombre.Contacto", "Matricula", "Name_Family","Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto"]
+            ["Nombre.Contacto", "Matricula", "Name_Family","Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto", "Movil"]
         ),
         "Cbba_Days_1er.xlsx": generar_subset(
             resultado, ["Cochabamba"], "Days", ["1er_Contacto", "Ambas"],
-            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto"]
+            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto", "Movil"]
         ),
         "Cbba_Days_2do.xlsx": generar_subset(
             resultado, ["Cochabamba"], "Days", ["2do_Contacto"],
-            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto"]
+            ["Nombre.Contacto", "next_mtto", "Name_Family", "Matricula", "Km_ult_mtto", "Movil"]
         ),
         "Cbba_Km_1er.xlsx": generar_subset(
             resultado, ["Cochabamba"], "Km", ["1er_Contacto", "Ambas"],
-            ["Nombre.Contacto", "Matricula", "Name_Family", "Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto"]
+            ["Nombre.Contacto", "Matricula", "Name_Family", "Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto", "Movil"]
         ),
         "Cbba_Km_2do.xlsx": generar_subset(
             resultado, ["Cochabamba"], "Km", ["2do_Contacto"],
-            ["Nombre.Contacto", "Matricula", "Name_Family", "Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto"]
+            ["Nombre.Contacto", "Matricula", "Name_Family", "Km_ult_mtto", "ultimo_desc_mantenimiento", "Km_comercial", "next_mtto", "Movil"]
         )
     }
 

@@ -253,3 +253,13 @@ if uploaded_file is not None:
     data_bytes = uploaded_file.read()
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     file_name = f"results/{timestamp}_{uploaded_file.name}"
+
+    # Subir archivo al bucket
+    try:
+        bucket = client.bucket(bucket_name)
+        blob = bucket.blob(file_name)
+        blob.upload_from_string(data_bytes, content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+        st.success(f"✅ Archivo '{uploaded_file.name}' subido correctamente al bucket como '{file_name}'")
+    except Exception as e:
+        st.error(f"❌ Error al subir el archivo: {e}")
